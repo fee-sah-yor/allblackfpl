@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* 'PremierSans-Regular', Arial, 'Helvetica Neue', Helvetica, sans-serif; */
+
+:root {
+    --original-green: #0a8453;
+}
+
+html {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: "poppins", sans-serif;
+    background-color: black !important;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container {
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index: 10;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a:hover {
+    color: #0a422c
+}
+
+/* ============HEADER=========== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 60px;
+    border-radius: 70%;
+    margin: 1rem 2rem 1rem 0;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* =======MAIN BODY SECTION========= */
+
+/* ============INTRODUCTION============= */
+
+.text {
+    margin: 3rem 0;
+}
+
+.text h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1;
+}
+
+span {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--original-green);
+}
+
+/* =====LEAGUE SECTION======= */
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardOne {
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 0 0 18px 0 rgb(36, 35, 35);
+    border-radius: 20px;
+    padding: 3rem 3rem;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.cardOne ul li{
+    font-size: 16px;
+}
+
+.cardOne:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #3bd396;
+}
+
+.classic,
+.elimination {
+    width: 50%;
+}
+
+.black {
+    width: 50%;
+    margin-left: 50%;
+}
+
+/* ============REGISTRATION SECTION================ */
+.card-title {
+    margin: 3rem 0;
+}
+
+.cardholder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.maincontainer {
+    width: 250px;
+    height: 250px;
+    margin: 1rem;
+    perspective: 1000px;
+}
+
+.thecard {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+.thecard:hover {
+    transform: rotateY(180deg);
+}
+
+.thefront {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    color: var(--original-green);
+    backface-visibility: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.thefront h3 {
+    text-align: center;
+    letter-spacing: 1;
+    font-size: 1.8rem;
+}
+
+.thefront img {
+    width: 60px;
+}
+
+.theback {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    background: var(--original-green);
+    color: whitesmoke;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+
+.theback p {
+    font-size: 15px;
+}
+
+.theback .follow,
+.theback .pay,
+.theback .confirm  {
+    margin: 2rem;
+    line-height: 1.4rem;
+}
+
+.theback .confirm a{
+    color:#12cc81;
+    font-size:17px;
+}
+
+/* ==========FOOTER SECTION========= */
+.footer-text {
+    padding: 2rem;
+    margin-top: 3rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-text h3{
+    font-weight: 300;
+    color:var(--original-green);
+}
+
+.footer-text h5 {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 1rem;
+}
+
+.footer-text a {
+    font-size: 15px;
+    border: 2px solid black;
+}
+
+.footer-text a:hover {
+    border: 1px solid #12cc81;
+    padding: 3px;
+    border-radius: 20px;
+    font-size: 17px;
+    color: white;
+}
+
+/* ================MEDIA QUERIES========= */
+
+@media screen and (max-width:768px) {
+  .card-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cardOne{
+    width:100%;
+  }
+
+  .black{
+    justify-self:center;
+    margin-left:0;
+  }
+}
+
+@media screen and (max-width:570px) {
+    iframe{
+        width:100%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    main{
+        display:flex;
+        flex-direction:column;
+    }
+
+    iframe{
+        width:100%;
+    }
+
+    .cardOne ul li{
+        font-size: 15px;
+    }
+}
