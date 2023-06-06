@@ -2,9 +2,9 @@
 /* 'PremierSans-Regular', Arial, 'Helvetica Neue', Helvetica, sans-serif; */
 
 :root {
-    --original-green: #ff0000
+    --original-green: #ff0000;
 }
-/* #0a8453; */
+
 html {
     min-width: 375px;
     max-width: 1440px;
